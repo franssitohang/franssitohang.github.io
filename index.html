@@ -5,6 +5,15 @@
 <title>Test</title>
 </head>
 <style>
+
+.onboard {
+  width:50%;
+  right: 25%;
+  position: absolute;
+  left: 25%;
+  top:10%;
+}
+  
 input[type=text],input[type=date], select {
   width: 100%;
   padding: 12px 20px;
@@ -34,36 +43,38 @@ div {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
 }
 </style>
 <body>
-  
-  	<h3>On-Boarding Karyawan Baru</h3>
-  	<label for="nama">Nama</label>
-    <input type="text" id="nama" placeholder="Masukkan nama anda">
-  	<label for="alamat">Alamat</label>
-  	<input type="text" id="alamat" placeholder="Masukkan alamat anda">
-  	<label for="jeniskelamin">Jenis Kelamin</label>
-    <select id="jeniskelamin">
-      <option value="" disabled selected>Select your option</option>
-      <option value="Laki-Laki">Laki-Laki</option>
-      <option value="Perempuan">Perempuan</option>
-    </select>
-   	<label for="tgllahir">Tanggal Lahir</label>
-  	<input type="date" id="tgllahir">
-    <button type="button" onclick="getInputValue();">Save</button>
-    
-    <script>
-        function getInputValue(){
-            // Selecting the input element and get value 
-            var nama = document.getElementById("nama").value;
-          	var alamat = document.getElementById("alamat").value;
-          	var jeniskelamin = document.getElementById("jeniskelamin").value;
-          	var tgllahir = document.getElementById("tgllahir").value;
-            
-            // Menampilkan value
-            alert(nama + "\\n" + alamat + "\\n" + jeniskelamin + "\\n" + tgllahir );
-        }
-    </script>
+  	
+<div class="onboard">
+	<h3 style="text-align:center;">On-Boarding Karyawan Baru</h3>
+  		<label for="nama">Nama</label>
+    	<input type="text" id="nama" placeholder="Masukkan nama anda">
+  		<label for="alamat">Alamat</label>
+  		<input type="text" id="alamat" placeholder="Masukkan alamat anda">
+  		<label for="jeniskelamin">Jenis Kelamin</label>
+    	<select id="jeniskelamin">
+      		<option value="" disabled selected>Select your option</option>
+      		<option value="Laki-Laki">Laki-Laki</option>
+      		<option value="Perempuan">Perempuan</option>
+    	</select>
+   		<label for="tgllahir">Tanggal Lahir</label>
+  		<input type="date" id="tgllahir">
+    	<button type="button" onclick="getInputValue();">Save</button>
+</div>    
+<script>
+function getInputValue(){
+	// Selecting the input element and get value 
+	var nama = document.getElementById("nama").value;
+	var alamat = document.getElementById("alamat").value;
+	var jeniskelamin = document.getElementById("jeniskelamin").value;
+	var tgllahir = document.getElementById("tgllahir").value;
+	            
+	// Menampilkan value
+	alert(nama + "\\n" + alamat + "\\n" + jeniskelamin + "\\n" + tgllahir );
+}
+</script>
 </body>
 </html>
